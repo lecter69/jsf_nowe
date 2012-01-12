@@ -16,10 +16,10 @@ public class PinValidator implements Validator {
 		
 		String pesel = (String) value;
 		
-		if (pesel.length() != 4) {
+		if (pesel.length() != 11) {
 			FacesMessage message = new FacesMessage();
-			message.setDetail("PIN musi składać się z 4 cyfr");
-			message.setSummary("PIN musi składać się z 4 cyfr");
+			message.setDetail("Pesel musi składać się z 11 cyfr");
+			message.setSummary("Pesel musi składać się z 11 cyfr");
 			message.setSeverity(FacesMessage.SEVERITY_ERROR);
 			throw new ValidatorException(message);
 		}

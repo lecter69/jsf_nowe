@@ -6,6 +6,12 @@
       http://java.sun.com/xml/ns/javaee
       http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
 
+
+                <validator>
+                          <validator-id>isTrue</validator-id>
+                          <validator-class>validators.IsTrue</validator-class>
+                </validator>
+
 	<application>
 		<resource-bundle>
 			<base-name>com.example.jsfdemo.messages</base-name>

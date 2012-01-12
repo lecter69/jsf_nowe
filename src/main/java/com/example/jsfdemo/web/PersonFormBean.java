@@ -69,7 +69,7 @@ public class PersonFormBean implements Serializable {
 		for (Person person : pm.getAllPersons()) {
 			if (person.getPin().equalsIgnoreCase(pin)) {
 				FacesMessage message = new FacesMessage(
-						"Person with this PIN already exists in database");
+						"Osoba z takim peselem juz istnieje!");
 				message.setSeverity(FacesMessage.SEVERITY_ERROR);
 				throw new ValidatorException(message);
 			}

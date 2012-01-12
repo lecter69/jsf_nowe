@@ -6,6 +6,9 @@
 	template="/templates/default.xhtml">
 	<ui:define name="content">
 
+				<h:messages id="messages" showDetail="#{true}"
+					showSummary="#{false}" />
+			
 		<h:form id="personForm">
             <f:event type="postValidate" listener="#{personBean.validatePinDob}" />
             
@@ -32,16 +35,25 @@
 				<h:inputText id="weight" value="#{personBean.person.weight}">
 					<f:validateDoubleRange minimum="20.5" maximum="150.5" />
 				</h:inputText>
+                                
+                                <h:outputText value="#{msg.personNumOfChildrenLabel}" />
+				<h:inputText id="noc" value="#{personBean.person.numOfChildren}" />
+                                
+                                 <h:selectBooleanCheckbox id="accept"
+                                 validator="isTrue"
+                                 required="true">
+                        </h:selectBooleanCheckbox>
+                            <h:outputText value="#{msg.accept}" />
+                                
 			</h:panelGrid>
 			
-			<h:commandButton value="#{msg.personFormOKButton}"
+		                    
+                       
+            
+            <h:commandButton value="#{msg.personFormOKButton}"
 				action="#{personBean.addPerson}" />
 
-
-			<h:panelGrid>
-				<h:messages id="messages" showDetail="#{true}"
-					showSummary="#{false}" />
-			</h:panelGrid>
+			
 		</h:form>
 
 	</ui:define>

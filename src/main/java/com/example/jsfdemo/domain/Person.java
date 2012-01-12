@@ -10,12 +10,12 @@ import javax.validation.constraints.Size;
 public class Person {
 	
 	private String firstName = "unknown";
-	private String zipCode = "";
+	private String zipCode = "00-000";
 	private String pin = "";
 	private Date dateOfBirth = new Date();
 	private double weight;
 	private boolean married;
-	private int numOfChildren;
+	private int numOfChildren=0;
 	
 	@Size(min = 2, max = 20)
 	public String getFirstName() {

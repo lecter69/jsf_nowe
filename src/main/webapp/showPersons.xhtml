@@ -23,6 +23,26 @@
       </h:column>
       
       <h:column>
+        <f:facet name="header">#{msg.personDobLabel}</f:facet>
+        #{item.dateOfBirth}
+      </h:column>
+      
+       <h:column>
+        <f:facet name="header">#{msg.personZipCodeLabel}</f:facet>
+        #{item.zipCode}
+      </h:column>
+      
+      <h:column>
+        <f:facet name="header">#{msg.personWeightLabel}</f:facet>
+        #{item.weight}
+      </h:column>
+      
+      <h:column>
+        <f:facet name="header">#{msg.personNumOfChildrenLabel}</f:facet>
+        #{item.numOfChildren}
+      </h:column>
+      
+      <h:column>
         <f:facet name="header">#{msg.action}</f:facet>
         <h:commandLink value="#{msg.actionDelete}" action="#{personBean.deletePerson}"/>
       </h:column>
