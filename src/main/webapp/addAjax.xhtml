@@ -64,8 +64,18 @@
 				<h:outputText id="pinOutput" value="#{personBean.person.pin}" />
 
 				<h:outputText value="#{msg.personDobLabel}" />
-				<h:outputText id="dobOutput"
-					value="#{personBean.person.dateOfBirth}" />
+				<h:outputText id="dobOutput" value="#{personBean.person.dateOfBirth}" />
+                                
+                                
+                                <h:outputText value="#{msg.personZipCodeLabel}" />
+				<h:outputText id="zipOutput" value="#{personBean.person.zipCode}" />
+                                
+                                <h:outputText value="#{msg.personWeightLabel}" />
+				<h:outputText id="weightOutput" value="#{personBean.person.weight}" />
+                                
+                                <h:outputText value="#{msg.personNumOfChildrenLabel}" />
+				<h:outputText id="nocOutput" value="#{personBean.person.numOfChildren}" />
+                                
 			</h:panelGrid>
 
 		</h:form>
